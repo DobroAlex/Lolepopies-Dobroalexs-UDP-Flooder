@@ -28,359 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.SettingsLabel = new System.Windows.Forms.Label();
+            this.AddressLabel = new System.Windows.Forms.Label();
+            this.PortLabel = new System.Windows.Forms.Label();
+            this.AddressTextBox = new System.Windows.Forms.TextBox();
+            this.PortTextBox = new System.Windows.Forms.TextBox();
+            this.MessageLabel = new System.Windows.Forms.Label();
+            this.MessageTextBox = new System.Windows.Forms.TextBox();
+            this.isRandomMessageCheckBox = new System.Windows.Forms.CheckBox();
+            this.MessgaSizeLabel = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.disappearWhenStartedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.minimiseToTaskbarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.enableByteCounterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.enableMulticoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MessageSizeTextBox = new System.Windows.Forms.TextBox();
+            this.BytesLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // SettingsLabel
             // 
-            this.button1.Location = new System.Drawing.Point(172, 290);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(210, 76);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SettingsLabel.AutoSize = true;
+            this.SettingsLabel.Location = new System.Drawing.Point(13, 13);
+            this.SettingsLabel.Name = "SettingsLabel";
+            this.SettingsLabel.Size = new System.Drawing.Size(59, 17);
+            this.SettingsLabel.TabIndex = 0;
+            this.SettingsLabel.Text = "Settings";
             // 
-            // label1
+            // AddressLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Address";
+            this.AddressLabel.AutoSize = true;
+            this.AddressLabel.Location = new System.Drawing.Point(12, 44);
+            this.AddressLabel.Name = "AddressLabel";
+            this.AddressLabel.Size = new System.Drawing.Size(60, 17);
+            this.AddressLabel.TabIndex = 1;
+            this.AddressLabel.Text = "Address";
             // 
-            // textBox1
+            // PortLabel
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 26);
-            this.textBox1.TabIndex = 2;
+            this.PortLabel.AutoSize = true;
+            this.PortLabel.Location = new System.Drawing.Point(15, 76);
+            this.PortLabel.Name = "PortLabel";
+            this.PortLabel.Size = new System.Drawing.Size(34, 17);
+            this.PortLabel.TabIndex = 2;
+            this.PortLabel.Text = "Port";
             // 
-            // textBox2
+            // AddressTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 107);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(93, 26);
-            this.textBox2.TabIndex = 3;
+            this.AddressTextBox.Location = new System.Drawing.Point(79, 44);
+            this.AddressTextBox.Name = "AddressTextBox";
+            this.AddressTextBox.Size = new System.Drawing.Size(100, 22);
+            this.AddressTextBox.TabIndex = 3;
+            this.AddressTextBox.Text = "127.0.0.1";
             // 
-            // label2
+            // PortTextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(121, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Port";
+            this.PortTextBox.Location = new System.Drawing.Point(79, 76);
+            this.PortTextBox.Name = "PortTextBox";
+            this.PortTextBox.Size = new System.Drawing.Size(100, 22);
+            this.PortTextBox.TabIndex = 4;
+            this.PortTextBox.Text = "9898";
             // 
-            // label3
+            // MessageLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 156);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Size";
+            this.MessageLabel.AutoSize = true;
+            this.MessageLabel.Location = new System.Drawing.Point(218, 49);
+            this.MessageLabel.Name = "MessageLabel";
+            this.MessageLabel.Size = new System.Drawing.Size(65, 17);
+            this.MessageLabel.TabIndex = 5;
+            this.MessageLabel.Text = "Message";
+            // 
+            // MessageTextBox
+            // 
+            this.MessageTextBox.Location = new System.Drawing.Point(290, 44);
+            this.MessageTextBox.Name = "MessageTextBox";
+            this.MessageTextBox.Size = new System.Drawing.Size(100, 22);
+            this.MessageTextBox.TabIndex = 6;
+            this.MessageTextBox.Text = "GET RECKT";
+            // 
+            // isRandomMessageCheckBox
+            // 
+            this.isRandomMessageCheckBox.AutoSize = true;
+            this.isRandomMessageCheckBox.Location = new System.Drawing.Point(414, 44);
+            this.isRandomMessageCheckBox.Name = "isRandomMessageCheckBox";
+            this.isRandomMessageCheckBox.Size = new System.Drawing.Size(152, 21);
+            this.isRandomMessageCheckBox.TabIndex = 7;
+            this.isRandomMessageCheckBox.Text = "Random message?";
+            this.isRandomMessageCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // MessgaSizeLabel
+            // 
+            this.MessgaSizeLabel.AutoSize = true;
+            this.MessgaSizeLabel.Location = new System.Drawing.Point(221, 76);
+            this.MessgaSizeLabel.Name = "MessgaSizeLabel";
+            this.MessgaSizeLabel.Size = new System.Drawing.Size(96, 17);
+            this.MessgaSizeLabel.TabIndex = 8;
+            this.MessgaSizeLabel.Text = "Message Size";
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(73, 154);
-            this.trackBar1.Maximum = 65000;
-            this.trackBar1.Minimum = 1;
+            this.trackBar1.Location = new System.Drawing.Point(224, 97);
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(362, 69);
-            this.trackBar1.TabIndex = 6;
-            this.trackBar1.Value = 1;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.trackBar1.Size = new System.Drawing.Size(166, 56);
+            this.trackBar1.TabIndex = 9;
             // 
-            // label4
+            // MessageSizeTextBox
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(491, 188);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Byte";
+            this.MessageSizeTextBox.Location = new System.Drawing.Point(414, 75);
+            this.MessageSizeTextBox.Name = "MessageSizeTextBox";
+            this.MessageSizeTextBox.Size = new System.Drawing.Size(100, 22);
+            this.MessageSizeTextBox.TabIndex = 10;
             // 
-            // checkBox1
+            // BytesLabel
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(405, 126);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(131, 24);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Random Size";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 222);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Threads";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(104, 222);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(62, 26);
-            this.numericUpDown1.TabIndex = 10;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(178, 224);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 20);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Delay (ms)";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(268, 222);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(54, 26);
-            this.numericUpDown2.TabIndex = 12;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(338, 226);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 20);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Actions";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(406, 224);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(74, 26);
-            this.numericUpDown3.TabIndex = 14;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.settingsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(554, 33);
-            this.menuStrip1.TabIndex = 15;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.disappearWhenStartedToolStripMenuItem,
-            this.minimiseToTaskbarToolStripMenuItem,
-            this.enableByteCounterToolStripMenuItem,
-            this.enableMulticoreToolStripMenuItem});
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
-            this.settingsToolStripMenuItem.Text = "Settings";
-            // 
-            // disappearWhenStartedToolStripMenuItem
-            // 
-            this.disappearWhenStartedToolStripMenuItem.CheckOnClick = true;
-            this.disappearWhenStartedToolStripMenuItem.Name = "disappearWhenStartedToolStripMenuItem";
-            this.disappearWhenStartedToolStripMenuItem.Size = new System.Drawing.Size(376, 30);
-            this.disappearWhenStartedToolStripMenuItem.Text = "Completely disappear when started";
-            this.disappearWhenStartedToolStripMenuItem.ToolTipText = "Overides \"Minimise to toolbar\" when started\r\nYou will have to close it manually w" +
-    "ith task manager";
-            // 
-            // minimiseToTaskbarToolStripMenuItem
-            // 
-            this.minimiseToTaskbarToolStripMenuItem.CheckOnClick = true;
-            this.minimiseToTaskbarToolStripMenuItem.Name = "minimiseToTaskbarToolStripMenuItem";
-            this.minimiseToTaskbarToolStripMenuItem.Size = new System.Drawing.Size(376, 30);
-            this.minimiseToTaskbarToolStripMenuItem.Text = "Minimise to taskbar";
-            // 
-            // enableByteCounterToolStripMenuItem
-            // 
-            this.enableByteCounterToolStripMenuItem.CheckOnClick = true;
-            this.enableByteCounterToolStripMenuItem.Name = "enableByteCounterToolStripMenuItem";
-            this.enableByteCounterToolStripMenuItem.Size = new System.Drawing.Size(376, 30);
-            this.enableByteCounterToolStripMenuItem.Text = "Enable byte counter";
-            this.enableByteCounterToolStripMenuItem.ToolTipText = "Disabled by default due to lag\r\nWill crash if settings are too high";
-            this.enableByteCounterToolStripMenuItem.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem2});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(73, 26);
-            this.contextMenuStrip1.Opened += new System.EventHandler(this.contextMenuStrip1_Opened);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(72, 22);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(178, 261);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 20);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Bytes sent: 0";
-            this.label8.Visible = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(399, 329);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 36);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Reset counter";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(436, 156);
-            this.textBox3.MaxLength = 5000000;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 26);
-            this.textBox3.TabIndex = 19;
-            this.textBox3.Text = "1";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox3.WordWrap = false;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // enableMulticoreToolStripMenuItem
-            // 
-            this.enableMulticoreToolStripMenuItem.CheckOnClick = true;
-            this.enableMulticoreToolStripMenuItem.Name = "enableMulticoreToolStripMenuItem";
-            this.enableMulticoreToolStripMenuItem.Size = new System.Drawing.Size(376, 30);
-            this.enableMulticoreToolStripMenuItem.Text = "Enable multi-core flood";
-            this.enableMulticoreToolStripMenuItem.ToolTipText = "Will take up lots of cpu usage but might be better.";
+            this.BytesLabel.AutoSize = true;
+            this.BytesLabel.Location = new System.Drawing.Point(524, 76);
+            this.BytesLabel.Name = "BytesLabel";
+            this.BytesLabel.Size = new System.Drawing.Size(42, 17);
+            this.BytesLabel.TabIndex = 11;
+            this.BytesLabel.Text = "bytes";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 378);
-            this.ContextMenuStrip = this.contextMenuStrip1;
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(622, 433);
+            this.Controls.Add(this.BytesLabel);
+            this.Controls.Add(this.MessageSizeTextBox);
             this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.MessgaSizeLabel);
+            this.Controls.Add(this.isRandomMessageCheckBox);
+            this.Controls.Add(this.MessageTextBox);
+            this.Controls.Add(this.MessageLabel);
+            this.Controls.Add(this.PortTextBox);
+            this.Controls.Add(this.AddressTextBox);
+            this.Controls.Add(this.PortLabel);
+            this.Controls.Add(this.AddressLabel);
+            this.Controls.Add(this.SettingsLabel);
             this.Name = "Form1";
-            this.Text = "Lolepopie\'s UDP Flooder";
-            this.Resize += new System.EventHandler(this.Form1_Resize);
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,33 +173,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label SettingsLabel;
+        private System.Windows.Forms.Label AddressLabel;
+        private System.Windows.Forms.Label PortLabel;
+        private System.Windows.Forms.TextBox AddressTextBox;
+        private System.Windows.Forms.TextBox PortTextBox;
+        private System.Windows.Forms.Label MessageLabel;
+        private System.Windows.Forms.TextBox MessageTextBox;
+        private System.Windows.Forms.CheckBox isRandomMessageCheckBox;
+        private System.Windows.Forms.Label MessgaSizeLabel;
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem disappearWhenStartedToolStripMenuItem;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.ToolStripMenuItem minimiseToTaskbarToolStripMenuItem;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ToolStripMenuItem enableByteCounterToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ToolStripMenuItem enableMulticoreToolStripMenuItem;
+        private System.Windows.Forms.TextBox MessageSizeTextBox;
+        private System.Windows.Forms.Label BytesLabel;
     }
 }
-
