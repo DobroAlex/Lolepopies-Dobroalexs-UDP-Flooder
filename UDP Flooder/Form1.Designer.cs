@@ -40,7 +40,16 @@
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.MessageSizeTextBox = new System.Windows.Forms.TextBox();
             this.BytesLabel = new System.Windows.Forms.Label();
+            this.ThreadsLabel = new System.Windows.Forms.Label();
+            this.DelayLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ThreadsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.DelayNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.RequestPerThreadNumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThreadsNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DelayNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RequestPerThreadNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // SettingsLabel
@@ -64,7 +73,7 @@
             // PortLabel
             // 
             this.PortLabel.AutoSize = true;
-            this.PortLabel.Location = new System.Drawing.Point(15, 76);
+            this.PortLabel.Location = new System.Drawing.Point(12, 78);
             this.PortLabel.Name = "PortLabel";
             this.PortLabel.Size = new System.Drawing.Size(34, 17);
             this.PortLabel.TabIndex = 2;
@@ -145,11 +154,75 @@
             this.BytesLabel.TabIndex = 11;
             this.BytesLabel.Text = "bytes";
             // 
+            // ThreadsLabel
+            // 
+            this.ThreadsLabel.AutoSize = true;
+            this.ThreadsLabel.Location = new System.Drawing.Point(13, 136);
+            this.ThreadsLabel.Name = "ThreadsLabel";
+            this.ThreadsLabel.Size = new System.Drawing.Size(61, 17);
+            this.ThreadsLabel.TabIndex = 12;
+            this.ThreadsLabel.Text = "Threads";
+            // 
+            // DelayLabel
+            // 
+            this.DelayLabel.AutoSize = true;
+            this.DelayLabel.Location = new System.Drawing.Point(218, 135);
+            this.DelayLabel.Name = "DelayLabel";
+            this.DelayLabel.Size = new System.Drawing.Size(72, 17);
+            this.DelayLabel.TabIndex = 14;
+            this.DelayLabel.Text = "Delay(ms)";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(411, 135);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 17);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Request per thread";
+            // 
+            // ThreadsNumericUpDown
+            // 
+            this.ThreadsNumericUpDown.Location = new System.Drawing.Point(79, 136);
+            this.ThreadsNumericUpDown.Name = "ThreadsNumericUpDown";
+            this.ThreadsNumericUpDown.Size = new System.Drawing.Size(100, 22);
+            this.ThreadsNumericUpDown.TabIndex = 17;
+            this.ThreadsNumericUpDown.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // DelayNumericUpDown
+            // 
+            this.DelayNumericUpDown.Location = new System.Drawing.Point(297, 135);
+            this.DelayNumericUpDown.Name = "DelayNumericUpDown";
+            this.DelayNumericUpDown.Size = new System.Drawing.Size(93, 22);
+            this.DelayNumericUpDown.TabIndex = 18;
+            this.DelayNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // RequestPerThreadNumericUpDown
+            // 
+            this.RequestPerThreadNumericUpDown.Location = new System.Drawing.Point(548, 136);
+            this.RequestPerThreadNumericUpDown.Name = "RequestPerThreadNumericUpDown";
+            this.RequestPerThreadNumericUpDown.Size = new System.Drawing.Size(62, 22);
+            this.RequestPerThreadNumericUpDown.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 433);
+            this.Controls.Add(this.RequestPerThreadNumericUpDown);
+            this.Controls.Add(this.DelayNumericUpDown);
+            this.Controls.Add(this.ThreadsNumericUpDown);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DelayLabel);
+            this.Controls.Add(this.ThreadsLabel);
             this.Controls.Add(this.BytesLabel);
             this.Controls.Add(this.MessageSizeTextBox);
             this.Controls.Add(this.trackBar1);
@@ -166,6 +239,9 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ThreadsNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DelayNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RequestPerThreadNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +261,11 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.TextBox MessageSizeTextBox;
         private System.Windows.Forms.Label BytesLabel;
+        private System.Windows.Forms.Label ThreadsLabel;
+        private System.Windows.Forms.Label DelayLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown ThreadsNumericUpDown;
+        private System.Windows.Forms.NumericUpDown DelayNumericUpDown;
+        private System.Windows.Forms.NumericUpDown RequestPerThreadNumericUpDown;
     }
 }
