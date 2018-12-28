@@ -16,3 +16,4 @@ C:\Users\User\source\repos\MVC\Lolepopies-DobroAlex-DDoS-Machine\UDP Flooder\obj
 C:\Users\User\source\repos\MVC\Lolepopies-DobroAlex-DDoS-Machine\UDP Flooder\obj\Debug\UDP Flooder.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\MVC\Lolepopies-DobroAlex-DDoS-Machine\UDP Flooder\obj\Debug\UDP Flooder.exe
 C:\Users\User\source\repos\MVC\Lolepopies-DobroAlex-DDoS-Machine\UDP Flooder\obj\Debug\UDP Flooder.pdb
+C:\Users\User\source\repos\MVC\Lolepopies-DobroAlex-DDoS-Machine\UDP Flooder\obj\Debug\UDP Flooder.csprojAssemblyReference.cache
