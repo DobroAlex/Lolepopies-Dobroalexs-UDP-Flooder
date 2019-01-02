@@ -35,29 +35,30 @@
             this.PortTextBox = new System.Windows.Forms.TextBox();
             this.MessageLabel = new System.Windows.Forms.Label();
             this.MessageTextBox = new System.Windows.Forms.TextBox();
-            this.isRandomMessageCheckBox = new System.Windows.Forms.CheckBox();
-            this.MessgaSizeLabel = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.MessageSizeTextBox = new System.Windows.Forms.TextBox();
+            this.MessageSizeLabel = new System.Windows.Forms.Label();
             this.BytesLabel = new System.Windows.Forms.Label();
             this.ThreadsLabel = new System.Windows.Forms.Label();
             this.DelayLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.RequestsPerThreadLabel = new System.Windows.Forms.Label();
             this.ThreadsNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DelayNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.RequestPerThreadNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.RequestsPerThreadNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.isRandomMessageChackBox = new System.Windows.Forms.CheckBox();
+            this.MessageSizeNumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.ThreadsNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DelayNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RequestPerThreadNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RequestsPerThreadNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MessageSizeNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // SettingsLabel
             // 
             this.SettingsLabel.AutoSize = true;
+            this.SettingsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SettingsLabel.Location = new System.Drawing.Point(13, 13);
             this.SettingsLabel.Name = "SettingsLabel";
-            this.SettingsLabel.Size = new System.Drawing.Size(59, 17);
+            this.SettingsLabel.Size = new System.Drawing.Size(108, 29);
             this.SettingsLabel.TabIndex = 0;
             this.SettingsLabel.Text = "Settings";
             // 
@@ -108,47 +109,24 @@
             // 
             this.MessageTextBox.Location = new System.Drawing.Point(290, 44);
             this.MessageTextBox.Name = "MessageTextBox";
-            this.MessageTextBox.Size = new System.Drawing.Size(100, 22);
+            this.MessageTextBox.Size = new System.Drawing.Size(83, 22);
             this.MessageTextBox.TabIndex = 6;
             this.MessageTextBox.Text = "GET RECKT";
+            this.MessageTextBox.TextChanged += new System.EventHandler(this.MessageTextBox_TextChanged);
             // 
-            // isRandomMessageCheckBox
+            // MessageSizeLabel
             // 
-            this.isRandomMessageCheckBox.AutoSize = true;
-            this.isRandomMessageCheckBox.Location = new System.Drawing.Point(414, 44);
-            this.isRandomMessageCheckBox.Name = "isRandomMessageCheckBox";
-            this.isRandomMessageCheckBox.Size = new System.Drawing.Size(152, 21);
-            this.isRandomMessageCheckBox.TabIndex = 7;
-            this.isRandomMessageCheckBox.Text = "Random message?";
-            this.isRandomMessageCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // MessgaSizeLabel
-            // 
-            this.MessgaSizeLabel.AutoSize = true;
-            this.MessgaSizeLabel.Location = new System.Drawing.Point(221, 76);
-            this.MessgaSizeLabel.Name = "MessgaSizeLabel";
-            this.MessgaSizeLabel.Size = new System.Drawing.Size(96, 17);
-            this.MessgaSizeLabel.TabIndex = 8;
-            this.MessgaSizeLabel.Text = "Message Size";
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(224, 97);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(166, 56);
-            this.trackBar1.TabIndex = 9;
-            // 
-            // MessageSizeTextBox
-            // 
-            this.MessageSizeTextBox.Location = new System.Drawing.Point(414, 75);
-            this.MessageSizeTextBox.Name = "MessageSizeTextBox";
-            this.MessageSizeTextBox.Size = new System.Drawing.Size(100, 22);
-            this.MessageSizeTextBox.TabIndex = 10;
+            this.MessageSizeLabel.AutoSize = true;
+            this.MessageSizeLabel.Location = new System.Drawing.Point(218, 78);
+            this.MessageSizeLabel.Name = "MessageSizeLabel";
+            this.MessageSizeLabel.Size = new System.Drawing.Size(96, 17);
+            this.MessageSizeLabel.TabIndex = 8;
+            this.MessageSizeLabel.Text = "Message Size";
             // 
             // BytesLabel
             // 
             this.BytesLabel.AutoSize = true;
-            this.BytesLabel.Location = new System.Drawing.Point(524, 76);
+            this.BytesLabel.Location = new System.Drawing.Point(388, 81);
             this.BytesLabel.Name = "BytesLabel";
             this.BytesLabel.Size = new System.Drawing.Size(42, 17);
             this.BytesLabel.TabIndex = 11;
@@ -172,14 +150,14 @@
             this.DelayLabel.TabIndex = 14;
             this.DelayLabel.Text = "Delay(ms)";
             // 
-            // label1
+            // RequestsPerThreadLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(411, 135);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 17);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Request per thread";
+            this.RequestsPerThreadLabel.AutoSize = true;
+            this.RequestsPerThreadLabel.Location = new System.Drawing.Point(388, 134);
+            this.RequestsPerThreadLabel.Name = "RequestsPerThreadLabel";
+            this.RequestsPerThreadLabel.Size = new System.Drawing.Size(138, 17);
+            this.RequestsPerThreadLabel.TabIndex = 16;
+            this.RequestsPerThreadLabel.Text = "Requests per thread";
             // 
             // ThreadsNumericUpDown
             // 
@@ -195,9 +173,9 @@
             // 
             // DelayNumericUpDown
             // 
-            this.DelayNumericUpDown.Location = new System.Drawing.Point(297, 135);
+            this.DelayNumericUpDown.Location = new System.Drawing.Point(306, 135);
             this.DelayNumericUpDown.Name = "DelayNumericUpDown";
-            this.DelayNumericUpDown.Size = new System.Drawing.Size(93, 22);
+            this.DelayNumericUpDown.Size = new System.Drawing.Size(76, 22);
             this.DelayNumericUpDown.TabIndex = 18;
             this.DelayNumericUpDown.Value = new decimal(new int[] {
             1,
@@ -205,29 +183,51 @@
             0,
             0});
             // 
-            // RequestPerThreadNumericUpDown
+            // RequestsPerThreadNumericUpDown
             // 
-            this.RequestPerThreadNumericUpDown.Location = new System.Drawing.Point(548, 136);
-            this.RequestPerThreadNumericUpDown.Name = "RequestPerThreadNumericUpDown";
-            this.RequestPerThreadNumericUpDown.Size = new System.Drawing.Size(62, 22);
-            this.RequestPerThreadNumericUpDown.TabIndex = 19;
+            this.RequestsPerThreadNumericUpDown.Location = new System.Drawing.Point(523, 134);
+            this.RequestsPerThreadNumericUpDown.Name = "RequestsPerThreadNumericUpDown";
+            this.RequestsPerThreadNumericUpDown.Size = new System.Drawing.Size(62, 22);
+            this.RequestsPerThreadNumericUpDown.TabIndex = 19;
+            // 
+            // isRandomMessageChackBox
+            // 
+            this.isRandomMessageChackBox.AutoSize = true;
+            this.isRandomMessageChackBox.Location = new System.Drawing.Point(391, 44);
+            this.isRandomMessageChackBox.Name = "isRandomMessageChackBox";
+            this.isRandomMessageChackBox.Size = new System.Drawing.Size(170, 21);
+            this.isRandomMessageChackBox.TabIndex = 20;
+            this.isRandomMessageChackBox.Text = "Randomize message?";
+            this.isRandomMessageChackBox.UseVisualStyleBackColor = true;
+            // 
+            // MessageSizeNumericUpDown
+            // 
+            this.MessageSizeNumericUpDown.Location = new System.Drawing.Point(321, 75);
+            this.MessageSizeNumericUpDown.Maximum = new decimal(new int[] {
+            65000,
+            0,
+            0,
+            0});
+            this.MessageSizeNumericUpDown.Name = "MessageSizeNumericUpDown";
+            this.MessageSizeNumericUpDown.Size = new System.Drawing.Size(61, 22);
+            this.MessageSizeNumericUpDown.TabIndex = 21;
+            this.MessageSizeNumericUpDown.ValueChanged += new System.EventHandler(this.MessageSizeNumericUpDown_ValueChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(622, 433);
-            this.Controls.Add(this.RequestPerThreadNumericUpDown);
+            this.Controls.Add(this.MessageSizeNumericUpDown);
+            this.Controls.Add(this.isRandomMessageChackBox);
+            this.Controls.Add(this.RequestsPerThreadNumericUpDown);
             this.Controls.Add(this.DelayNumericUpDown);
             this.Controls.Add(this.ThreadsNumericUpDown);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.RequestsPerThreadLabel);
             this.Controls.Add(this.DelayLabel);
             this.Controls.Add(this.ThreadsLabel);
             this.Controls.Add(this.BytesLabel);
-            this.Controls.Add(this.MessageSizeTextBox);
-            this.Controls.Add(this.trackBar1);
-            this.Controls.Add(this.MessgaSizeLabel);
-            this.Controls.Add(this.isRandomMessageCheckBox);
+            this.Controls.Add(this.MessageSizeLabel);
             this.Controls.Add(this.MessageTextBox);
             this.Controls.Add(this.MessageLabel);
             this.Controls.Add(this.PortTextBox);
@@ -238,10 +238,10 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ThreadsNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DelayNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RequestPerThreadNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RequestsPerThreadNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MessageSizeNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,16 +256,15 @@
         private System.Windows.Forms.TextBox PortTextBox;
         private System.Windows.Forms.Label MessageLabel;
         private System.Windows.Forms.TextBox MessageTextBox;
-        private System.Windows.Forms.CheckBox isRandomMessageCheckBox;
-        private System.Windows.Forms.Label MessgaSizeLabel;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.TextBox MessageSizeTextBox;
+        private System.Windows.Forms.Label MessageSizeLabel;
         private System.Windows.Forms.Label BytesLabel;
         private System.Windows.Forms.Label ThreadsLabel;
         private System.Windows.Forms.Label DelayLabel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown ThreadsNumericUpDown;
         private System.Windows.Forms.NumericUpDown DelayNumericUpDown;
-        private System.Windows.Forms.NumericUpDown RequestPerThreadNumericUpDown;
+        private System.Windows.Forms.NumericUpDown RequestsPerThreadNumericUpDown;
+        private System.Windows.Forms.Label RequestsPerThreadLabel;
+        private System.Windows.Forms.CheckBox isRandomMessageChackBox;
+        private System.Windows.Forms.NumericUpDown MessageSizeNumericUpDown;
     }
 }

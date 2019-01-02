@@ -19,12 +19,25 @@ namespace UDP_Flooder
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void MessageSizeNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
+            if (!isRandomMessageChackBox.Checked)
+            {
+                MessageSizeNumericUpDown.Value = Encoding.Default.GetByteCount(MessageTextBox.Text);
+            }
+            else
+            {
+                MessageTextBox.Text = Encoding.Default.GetString( 
+                    Utils.GenerateRandomByteArray(
+                    (int)MessageSizeNumericUpDown.Value));
+            }
+        }
 
+        private void MessageTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MessageSizeNumericUpDown.Value = Encoding.Default.GetByteCount(MessageTextBox.Text);
         }
     }
 }
